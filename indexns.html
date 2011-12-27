@@ -1,0 +1,50 @@
+<html><head><title>videa</title>
+<script language="Javascript"></script>
+<script language="Javascript" src="animations.js"></script>
+</head>
+<body onLoad="init()" background="images/blackbit.gif">
+
+<DIV STYLE="position:absolute; top:26; left:6;">
+<img src="images/header.gif"><br>
+</DIV>
+
+<script language="Javascript">
+
+with(document)
+  {
+    writeln('<LAYER PAGEY=' + parseInt((ENV.SCREEN_Y-240-80)/2) + ' PAGEX=' + parseInt((ENV.SCREEN_X-240-40)/2) + '; WIDTH=120 HEIGHT=120 Z-INDEX=20>');
+    writeln('<img src="images/mainNavTL.gif" width=120; height=120; border=0><br></LAYER>');
+    writeln('<LAYER PAGEY=' + parseInt((ENV.SCREEN_Y-240-80)/2) + ' PAGEX=' + parseInt(((ENV.SCREEN_X-240-40)/2)+124) + ' WIDTH=120 HEIGHT=120 Z-INDEX=20>');
+    writeln('<img src="images/mainNavTR.gif" width=120; height=120; border=0><br></LAYER>');
+    writeln('<LAYER PAGEY=' + parseInt(((ENV.SCREEN_Y-240-80)/2)+124) + ' PAGEX=' + parseInt((ENV.SCREEN_X-240-40)/2) + ' WIDTH=120 HEIGHT=137 Z-INDEX=20>');
+    writeln('<img src="images/mainNavBL.gif" width=120; height=137; border=0><br></LAYER>');
+    writeln('<LAYER PAGEY=' + parseInt(((ENV.SCREEN_Y-240-80)/2)+124) + ' PAGEX=' + parseInt(((ENV.SCREEN_X-240-40)/2)+124) + ' WIDTH=120 HEIGHT=202 Z-INDEX=20>');
+    writeln('<img src="images/mainNavBR.gif" width=120 height=202 border=0><br></LAYER>');
+    writeln('<LAYER NAME="NAV_TL" PAGEY=' + parseInt((ENV.SCREEN_Y-240-80)/2) + ' PAGEX=' + parseInt((ENV.SCREEN_X-240-40)/2) + ' WIDTH=120 HEIGHT=120 Z-INDEX=200>');
+    writeln('<img NAME="i_NAV_TL" src="images/dummy.gif" width=120; height=120; border=0><br></LAYER>');
+    writeln('<LAYER NAME="NAV_TR" PAGEY=' + parseInt((ENV.SCREEN_Y-240-80)/2) + ' PAGEX=' + parseInt(((ENV.SCREEN_X-240-40)/2)+124) + ' WIDTH=120 HEIGHT=120 Z-INDEX=200>');
+    writeln('<img NAME="i_NAV_TR" src="images/dummy.gif" width=120; height=120; border=0><br></LAYER>');
+    writeln('<LAYER NAME="NAV_BL" PAGEY=' + parseInt(((ENV.SCREEN_Y-240-80)/2)+124) + ' PAGEX=' + parseInt((ENV.SCREEN_X-240-40)/2) + ' WIDTH=120 HEIGHT=120 Z-INDEX=200>');
+    writeln('<img NAME="i_NAV_BL" src="images/dummy.gif" width=120; height=120; border=0><br></LAYER>');
+    writeln('<LAYER NAME="NAV_BR" PAGEY=' + parseInt(((ENV.SCREEN_Y-240-80)/2)+124) + ' PAGEX=' + parseInt(((ENV.SCREEN_X-240-40)/2)+124) + ' WIDTH=120 HEIGHT=120 Z-INDEX=200>');
+    writeln('<img NAME="i_NAV_BR" src="images/dummy.gif" width=120 height=120 border=0><br></LAYER>');
+
+    writeln('<LAYER PAGEY=' + (ENV.SCREEN_Y-414) + ' PAGEX=' + (ENV.SCREEN_X-397) + '>');
+    writeln('<img src="images/grid.gif"><br></LAYER>');
+
+    for(x=0; x < ENV.cursorRefs.length; x++)
+      {
+        document.writeln('<LAYER NAME="' + ENV.cursorRefs[x] + '" PAGEX=0 PAGEY=0 Z-INDEX=100><img NAME="i_CUR_TR" src="images/cursorsquare_0.gif" border=0><br></LAYER>');
+      }
+	close();
+  }
+  
+</script>  
+
+<LAYER NAME="DOCKPAD" PAGEX=0 PAGEY=0 VISIBILITY=HIDE Z-INDEX=50>
+<img src="images/dockpad.gif" border=0><br>
+</LAYER>
+
+</body>
+</html>
+

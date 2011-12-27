@@ -1,0 +1,52 @@
+<html><head><title>videa</title>
+<script language="Javascript"></script>
+<script language="Javascript" src="animations.js"></script>
+</head>
+<body scroll="no" onContextMenu="return false;" onSelectStart="return false;" onLoad="init()" background="images/blackbit.gif" STYLE="cursor:crosshair;">
+
+<DIV ID="HEADER" STYLE="position:absolute; top:26; left:6;">
+<img src="images/header.gif"><br>
+</DIV>
+
+<DIV ID="DOCKPAD" STYLE="position:absolute; left:0; top:0; z-index:50; visibility:hidden">
+<img src="images/dockpad.gif" border=0><br>
+</DIV>
+
+<script language="Javascript">
+
+for(x=0; x < ENV.cursorRefs.length; x++)
+  {
+    document.writeln('<DIV ID="' + ENV.cursorRefs[x] + '" STYLE="position:absolute; top:0; left:0; z-index:100; Filter:Alpha(Opacity=60);"><img ID="i_CUR_TR" src="images/cursorsquare_0.gif" border=0><br></DIV>');
+  }
+
+var xConst = (ENV.SCREEN_X-240-40)/2;
+var yConst = (ENV.SCREEN_Y-240-80)/2;
+with(document)
+  {
+    writeln('<DIV STYLE="position:absolute; top:' + yConst + '; left:' + xConst + '; width:120; height:120; z-index:20;">');
+    writeln('<img src="images/mainNavTL.gif" width=120; height=120; border=0><br></DIV>');
+    writeln('<DIV STYLE="position:absolute; top:' + yConst + '; left:' + (xConst+124) + '; width:120; height:120; z-index:20;">');
+    writeln('<img src="images/mainNavTR.gif" width=120; height=120; border=0><br></DIV>');
+    writeln('<DIV STYLE="position:absolute; top:' + (yConst+124) + '; left:' + xConst + '; width:120; height:137; z-index:20;">');
+    writeln('<img src="images/mainNavBL.gif" width=120; height=137; border=0><br></DIV>');
+    writeln('<DIV STYLE="position:absolute; top:' + (yConst+124) + '; left:' + (xConst+124) + '; width=120 height=202 z-index:20;">');
+    writeln('<img src="images/mainNavBR.gif" border=0 width=120 height=202><br></DIV>');
+
+    writeln('<DIV ID="NAV_TL" STYLE="position:absolute; top:' + yConst + '; left:' + xConst + '; width:120; height:120; z-index:200;">');
+    writeln('<img ID="i_NAV_TL" src="images/dummy.gif" width=120; height=120; border=0><br></DIV>');
+    writeln('<DIV ID="NAV_TR" STYLE="position:absolute; top:' + yConst + '; left:' + (xConst+124) + '; width:120; height:120; z-index:200;">');
+    writeln('<img ID="i_NAV_TR" src="images/dummy.gif" width=120; height=120; border=0><br></DIV>');
+    writeln('<DIV ID="NAV_BL" STYLE="position:absolute; top:' + (yConst +124) + '; left:' + xConst + '; width:120; height:120; z-index:200;">');
+    writeln('<img ID="i_NAV_BL" src="images/dummy.gif" width=120; height=120; border=0><br></DIV>');
+    writeln('<DIV ID="NAV_BR" STYLE="position:absolute; top:' + (yConst +124) + '; left:' + (xConst+124) + '; width:120; height:120; z-index:200;">');
+    writeln('<img ID="i_NAV_BR" src="images/dummy.gif" width=120; height=120; border=0><br></DIV>');
+
+    writeln('<DIV STYLE="position:absolute; top:' + (ENV.SCREEN_Y-415) + '; left:' + (ENV.SCREEN_X-398) + ';">');
+    writeln('<img src="images/grid.gif"><br></DIV>');
+	close();
+  }
+</script>
+
+</body>
+</html>
+
